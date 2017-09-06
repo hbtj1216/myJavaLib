@@ -12,8 +12,8 @@ public class Huawei2 {
         Scanner sc = new Scanner(System.in);
         int M = sc.nextInt();
 
-        if(M <= 1 || M > 100) {
-            System.out.println("ERROR");
+        if(M <= 1 || M >= 100) {
+            System.out.println("ERROR!");
             return;
         }
 
@@ -22,10 +22,10 @@ public class Huawei2 {
             peopleList.add(i);
         }
 
-        int index = 0;
-        int num = 1;
+        int index = -1;
+        int num = 0;
         while(peopleList.size() >= M) {
-            if(num % M == 0) {
+            /*if(num % M == 0) {
                 peopleList.remove(index);
                 index--;
             }
@@ -35,7 +35,21 @@ public class Huawei2 {
 
             if(index > peopleList.size()-1) {
                 index = 0;
+            }*/
+
+            index++;
+            num++;
+
+            if(index > peopleList.size()-1) {
+                index = 0;
             }
+
+            if(num == M) {
+                peopleList.remove(index);
+                num = 0;
+                index--;
+            }
+
         }
 
         for(int i = 0; i < peopleList.size(); i++) {
@@ -46,7 +60,3 @@ public class Huawei2 {
         }
     }
 }
-
-
-
-
