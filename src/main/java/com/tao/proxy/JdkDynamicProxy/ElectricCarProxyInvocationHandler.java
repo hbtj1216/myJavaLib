@@ -1,4 +1,4 @@
-package proxy.JdkDynamicProxy;
+package com.tao.proxy.JdkDynamicProxy;
 
 /**
  * Created by Michael on 2017/8/5.

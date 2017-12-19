@@ -1,3 +1,5 @@
+package com.tao.algorithm;
+
 import java.util.Scanner;
 
 /**
